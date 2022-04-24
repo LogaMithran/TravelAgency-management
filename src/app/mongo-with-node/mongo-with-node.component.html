@@ -1,0 +1,44 @@
+<h1>MongoDB Connection</h1>
+
+<input type="button" value="Display" (click)="getAll()"/>
+<input type="button" value="Insert" (click)="insertdetails()"/>
+<input type="button" value="Update" (click)="updatedetails()"/>
+<input type="button" value="Delete" (click)="deletedetails()"/>
+
+<div *ngIf="showInsert">
+    <h3>Insert traveller</h3>
+    Give traveller Id : <input type="text" [(ngModel)]="insertTid"/><br>
+    Give traveller Name : <input type="text" [(ngModel)]="insertTName"/><br>
+    Give traveller Source : <input type="text" [(ngModel)]="insertTsource"/><br>
+    Give traveller Destination : <input type="text" [(ngModel)]="insertTdestination"/><br>
+    Give traveller Mode : <input type="text" [(ngModel)]="insertTmode"/><br>
+    <input type="button" value="Insert" (click)="inserttraveller()"/>
+</div>
+<div *ngIf="showUpdate">
+    <h3>Update traveller</h3>
+    Give traveller Name : <input type="text" [(ngModel)]="updateTid"/><br>
+    Give traveller Mode : <input type="text" [(ngModel)]="updateTmode"/><br>
+    <input type="button" value="Update" (click)="updateTraveller()"/>
+</div>
+
+<div *ngIf="showDelete">
+    <h3>Delete traveller</h3>
+    Give traveller Name : <input type="text" [(ngModel)]="deleteTid"/><br>
+    <input type="button" value="Delete" (click)="deleteTraveller()"/>
+</div>
+<table border="">
+    <tr>
+        <th>SNO</th>
+        <th>NAME</th>
+        <th>SOURCE</th>
+        <th>DESTINATION</th>
+        <th>MODE</th>
+    </tr>
+    <tr  *ngFor="let traveldetails of travelDetails;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{traveldetails.travellername}}</td>
+        <td>{{traveldetails.source}}</td>
+        <td>{{traveldetails.destination}}</td>
+        <td>{{traveldetails.mode}}</td>
+    </tr>
+</table>

@@ -1,0 +1,56 @@
+<h1>CRUD Operations</h1>
+
+<table border="2">
+    <tr>
+        <th>SNO</th>
+        <th>Name</th>
+        <th>SOURCE</th>
+        <th>DESTINATION</th>
+        <th>MDOE</th>
+        <th>OPERATIONS</th>
+    </tr>
+
+    <tr *ngFor="let travel of travelList;let i=index">
+        <td>{{i}}</td>
+        <td>{{travel.name}}</td>
+        <td>{{travel.source}}</td>
+        <td>{{travel.destination}}</td>
+        <td>{{travel.mode}}</td>
+        <td>
+            <input type="button" value="show" (click)="showDetails(i)"/>
+            <input type="button" value="Update" (click)="updateMode(i)"/>
+            <input type="button" value="Delete" (click)="deleteTraveller(i)"/>
+        </td>
+    </tr>
+    <tr>
+    </tr>
+</table>
+
+<div *ngIf="showDisplay">
+    <h3>Traveller Details</h3>
+        Name : {{confirmBooking.name}}
+        Source : {{confirmBooking.source}}
+        Destination : {{confirmBooking.destination}}
+        Mode : {{confirmBooking.mode}}
+</div>
+
+<div *ngIf="showUpdate">
+    <h3>Update Mode of transport</h3>
+    Choose Mode : <input type="text" [(ngModel)]="confirmBooking.mode"/>
+</div>
+
+<div *ngIf="showDelete">
+    <h3>Delete traveller</h3>
+    Give traveller name : <input type="text" [(ngModel)]="deleteName"/>
+</div>
+
+<div *ngIf="showInsert">
+    <h3>Insert traveller</h3>
+    Give traveller Name : <input type="text" [(ngModel)]="insertTName"/><br>
+    Give traveller Source : <input type="text" [(ngModel)]="insertTsource"/><br>
+    Give traveller Destination : <input type="text" [(ngModel)]="insertTdestination"/><br>
+    Give traveller Mode : <input type="text" [(ngModel)]="insertTmode"/><br>
+    <input type="button" value="Insert" (click)="insertTraveller()"/>
+</div>
+
+

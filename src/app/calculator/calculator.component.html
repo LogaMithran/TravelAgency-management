@@ -1,0 +1,19 @@
+<h1>Chapter 5 Calculator</h1>
+<div>
+    <label>Enter Number 1</label>
+    <input type="number" [(ngModel)]="num1"/><br>
+
+    <label>Enter Number 2</label>
+    <input type="number" [(ngModel)]="num2"/><br>
+
+    <select [(ngModel)]="cOperator">
+        <option>Addition</option>
+        <option>Subtraction</option>
+        <option>Multiplication</option>
+        <option>Division</option>
+        <option>Modular</option>
+    </select>
+    <input type="button" value="calculate" (click)="calculate()"/>
+
+    <h2>{{answer}}</h2>
+</div>

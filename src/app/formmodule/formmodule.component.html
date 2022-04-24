@@ -1,0 +1,7 @@
+<h1>Form Module using ngForm</h1>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label>Enter Username</label> <input type="text" [(ngModel)]="userName"/>
+    <label>Enter Password</label> <input type="password" [(ngModel)]="passWord"/>
+    <Button>Submit</Button>
+</form>

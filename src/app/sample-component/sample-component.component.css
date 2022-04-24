@@ -1,0 +1,119 @@
+h1{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+}
+.bookBus{
+    border: 2px solid #848484;
+	border-radius: 100px;
+	height:25px;
+	width: 200px;
+	padding-left:10px;
+	padding-right:10px;
+}
+#bookBusButton{
+    color: white;
+    border-radius: 100px;
+	height:25px;
+	width: 200px;
+	padding-left:10px;
+	padding-right:10px;
+    background-color:black;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+.container{ 
+    height: 300px;
+    box-shadow: -2px -1px 31px 9px rgba(255,127,0,0.83);
+    -webkit-box-shadow: -2px -1px 31px 9px rgba(255,127,0,0.83);
+    -moz-box-shadow: -2px -1px 31px 9px rgba(255,127,0,0.83);
+    display:flex;
+    margin: 0px 500px 0px 500px;
+    flex-direction: column;
+    align-items:center
+}
+
+.tablecontainer{
+    position :fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+table {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+	width: 800px;
+	border-collapse: collapse;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+th{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align:center;
+    padding:15px;
+    background-color:#d17213;
+}
+
+td{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding:15px;
+    background-color:rgba(255,255,255,0.3);
+    text-align:center;                  
+    color:black;
+}
+tr:hover{
+    background-color:grey;
+}
+.outerdiv {
+    border: 1px solid grey;
+    text-align: center;
+}
+
+h5 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin: 0px 20px 20px 20px;
+}
+
+.innerdiv {
+    border: 1px solid grey;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: left;
+    margin: 0px 20px 20px 20px;
+}
+.usercontainer {
+    border: 1px solid grey;
+    padding: 20px;
+    margin: 0px 20px 20px 20px;
+}
+
+h6 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+}
+
+.userphoto {
+    border: 1px solid black;
+    text-align: center;
+    float: right;
+    margin-top: -200px 100px 300px 0px;
+}
+label{
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+    padding:10px;
+}
+input{
+    width: 400px;
+}
+#usertext{
+    width: 350px
+}
+#registerButton{
+    width: 100px
+}
+#ubut{
+    width: 100px;   
+}
+#book{
+    text-align:left;
+}

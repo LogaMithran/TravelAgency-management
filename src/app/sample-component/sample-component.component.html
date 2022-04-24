@@ -1,0 +1,78 @@
+<h1>Book your Ride</h1>
+<br>
+<div *ngIf="showSearch" class="container">
+    <br><img src="../assets/images/bus.png"><br><br>
+    <input class="bookBus" type="text" placeholder="From" [(ngModel)]="source" /><br>
+    <input class="bookBus" type="text" placeholder="To" [(ngModel)]="destination" /> <br>
+
+    <button id="bookBusButton" type="button" value="Search" (click)="getBus()">
+        Search Bus
+    </button>
+</div>
+
+<div *ngIf="showDetails" class="tablecontainer">
+    <table>
+        <tr>
+            <th>SNO</th>
+            <th>TRAVEL NAME</th>
+            <th>SOURCE</th>
+            <th>DESTINATION</th>
+            <th>PRICE</th>
+            <th>AVAILABLITY</th>
+            <th>BOOK</th>
+        </tr>
+        <tr *ngFor="let traveldetails of busDetails;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{traveldetails.name}}</td>
+            <td>{{traveldetails.source}}</td>
+            <td>{{traveldetails.destination}}</td>
+            <td>{{traveldetails.price}}</td>
+            <td>{{traveldetails.availablity}}</td>
+            <td><input id="registerButton" type="button" value="Book" (click)="openRegistration(i)" /></td>
+        </tr>
+    </table>
+
+</div>
+
+<div *ngIf="registerTab" class="outerdiv">
+    <h3>PASSENGER DETAILS</h3>
+    <div class="innerdiv"><br>
+        <h5>Passenger Information</h5>
+        <div  class="usercontainer">
+            <label>Provide your name</label>
+            <input type="text" [(ngModel)]="userName" placeholder="Name" /><br>
+            <br>
+            <label>Choose gender </label> 
+            <select [(ngModel)]="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <br><br>
+            <label>Number of seats</label>
+            <input [(ngModel)]="seat" type="text"/>
+            <br><br>
+            <label>Provide Email</label>
+            <input [(ngModel)]="email" type="email" placeholder="xyz@gmail.com" />
+            <br><br>
+            <label>Provide Phone Number</label>
+            <input [(ngModel)]="phoneno" type="phone" /><br><br>
+            <input id="ubut" type="button" value="Book" (click)="insertUser()"/>
+        </div>
+        <div class="userphoto" style="margin-top: -200px ;margin-right: 100px;">
+            <h6>
+                Passenger photo
+            </h6>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="showSuccess">
+    <h1 id="book">
+        Booking Details
+    </h1>        
+    <h5>
+        Thank you for booking in our travels {{userName}}. You will get a confirmation message in your registered email Id
+    </h5>
+    <input type="button" value="Go to main page" (click)="goToMainAndUpdate()"/>
+</div>

@@ -1,0 +1,9 @@
+<h1>Directives</h1>
+
+<h2 *ngIf="show">My name is logamithran</h2>
+<h2>{{buttonName|uppercase}}</h2>
+<input type="button" (click)="showName()" value="show" [(ngModel)]="buttonName"/>
+
+<ul>
+    <li *ngFor="let m of movie;let i=index">{{m}}->>{{i}}</li>
+</ul>
